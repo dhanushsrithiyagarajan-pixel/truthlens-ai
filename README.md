@@ -124,7 +124,15 @@ Navigate to:
 
 *(Note: The application functions in **100% Offline Demo Mode** right out of the box. To optionally connect live Google Gemini generative AI reasoning, add your key to `.env` as `GEMINI_API_KEY=your_key_here`)*
 
+### ☁️ Render / Cloud Deployment
+When deploying to Render (Web Service):
+- **Runtime:** Python 3
+- **Build Command:** `pip install -r requirements.txt`
+- **Start Command:** `gunicorn app:app`
+- **Procfile:** A `Procfile` with `web: gunicorn app:app` is included in the root directory.
+
 ---
+
 
 ## 🧪 Testing & Empirical Benchmark Validation
 

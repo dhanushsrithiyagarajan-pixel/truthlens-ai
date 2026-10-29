@@ -309,10 +309,12 @@ def api_export_report(report_id):
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
+    host = os.getenv('HOST', '0.0.0.0')
     debug = os.getenv('FLASK_DEBUG', '1') == '1'
     print(f"==================================================")
     print(f" TruthLens AI - AI Deepfake & Misinformation Platform")
     print(f" 'Pause. Investigate. Verify.'")
-    print(f" Server starting on http://127.0.0.1:{port}")
+    print(f" Server starting on http://{host}:{port}")
     print(f"==================================================")
-    app.run(host='127.0.0.1', port=port, debug=debug)
+    app.run(host=host, port=port, debug=debug)
+
