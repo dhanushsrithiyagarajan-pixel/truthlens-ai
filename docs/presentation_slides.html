@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TruthLens AI — College Capstone Presentation</title>
+  <style>
+    :root {
+      --bg: #070b14;
+      --card: #0d1527;
+      --cyan: #00f2fe;
+      --violet: #8b5cf6;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .slide-deck {
+      width: 90vw;
+      max-width: 1100px;
+      height: 75vh;
+      max-height: 680px;
+      position: relative;
+    }
+    .slide {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: var(--card);
+      border: 1px solid rgba(0, 242, 254, 0.25);
+      border-radius: 20px;
+      padding: 3.5rem 4rem;
+      display: none;
+      flex-direction: column;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+      animation: fadeIn 0.3s ease;
+    }
+    .slide.active { display: flex; }
+    @keyframes fadeIn { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
+    .slide-tag {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--violet);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .slide-title {
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    .slide-content {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      line-height: 1.7;
+      flex: 1;
+    }
+    .highlight { color: var(--cyan); font-weight: 700; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem; }
+    .card-box {
+      background: rgba(7, 11, 20, 0.6);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+    }
+    .card-box h4 { color: var(--cyan); margin-bottom: 0.5rem; font-size: 1.1rem; }
+    .footer-nav {
+      position: absolute;
+      bottom: 2rem;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4rem;
+    }
+    .slide-counter { font-size: 0.9rem; color: var(--muted); font-weight: 600; }
+    .nav-btn {
+      background: rgba(0, 242, 254, 0.1);
+      border: 1px solid var(--cyan);
+      color: #fff;
+      padding: 0.6rem 1.4rem;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+    .nav-btn:hover { background: var(--cyan); color: #070b14; }
+  </style>
+</head>
+<body>
+
+  <div class="slide-deck">
+    <!-- Slide 1: Title -->
+    <div class="slide active">
+      <div class="slide-tag">Final-Year Cybersecurity Capstone Defense</div>
+      <h1 class="slide-title" style="font-size: 2.8rem; margin-top: 1rem;">
+        TruthLens AI
+      </h1>
+      <h2 style="color: var(--cyan); font-size: 1.5rem; margin-bottom: 1.5rem;">
+        AI-Powered Deepfake &amp; Misinformation Awareness Platform
+      </h2>
+      <div class="slide-content">
+        <p style="font-size: 1.3rem; color: #e2e8f0; margin-bottom: 2rem;">
+          Tagline: <em>"Pause. Investigate. Verify."</em>
+        </p>
+        <div class="card-box" style="display: inline-block;">
+          <p><strong>Academic Focus:</strong> Applied AI Ethics, Digital Media Forensics &amp; Threat Intelligence</p>
+          <p style="color: var(--muted); font-size: 0.95rem; margin-top: 0.35rem;">
+            Full-Stack Architecture: Python (Flask) • SQLite • Dynamic Forensic SPA • Chart.js
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2: Problem Statement -->
+    <div class="slide">
+      <div class="slide-tag">Slide 02 / The Threat Landscape</div>
+      <h2 class="slide-title">The Synthetic Media Crisis &amp; Cognitive Exploitation</h2>
+      <div class="slide-content">
+        <p>Generative AI models have democratized the creation of hyper-realistic deceptive media, rendering traditional visual intuition obsolete.</p>
+        <div class="grid-2">
+          <div class="card-box">
+            <h4>1. Asymmetric Synthetic Threats</h4>
+            <p style="font-size: 0.95rem;">• Acoustic Voice Cloning: Fueling "virtual kidnapping" and CEO imposter wire transfers.</p>
+            <p style="font-size: 0.95rem;">• Neural Lip-Syncing: Fabricating political confessions without leaving classic blur seams.</p>
+            <p style="font-size: 0.95rem;">• Recycled Visual Media: Re-circulating authentic 2019 footage under false 2026 breaking news captions.</p>
+          </div>
+          <div class="card-box">
+            <h4>2. The Forensic Vulnerability</h4>
+            <p style="font-size: 0.95rem;">• Social media platforms automatically strip EXIF camera metadata upon upload.</p>
+            <p style="font-size: 0.95rem;">• Automated AI detectors are prone to catastrophic generalization errors and false alarms.</p>
+            <p style="font-size: 0.95rem;">• Critical Gap: Digital citizens lack a structured, multi-source verification protocol.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: Proposed Architecture -->
+    <div class="slide">
+      <div class="slide-tag">Slide 03 / System Architecture</div>
+      <h2 class="slide-title">TruthLens AI Platform Architecture</h2>
+      <div class="slide-content">
+        <div class="grid-2">
+          <div class="card-box">
+            <h4>Client-Side Presentation Layer</h4>
+            <p style="font-size: 0.95rem;">• <strong>SaaS Dashboard:</strong> Real-time Chart.js analytics derived from actual SQLite records.</p>
+            <p style="font-size: 0.95rem;">• <strong>Deepfake Lab:</strong> Error Level Analysis (ELA) viewer &amp; visual artifact checklists.</p>
+            <p style="font-size: 0.95rem;">• <strong>Source Explorer:</strong> Domain typosquatting &amp; TLD risk scoring.</p>
+          </div>
+          <div class="card-box">
+            <h4>Backend Intelligence Engine</h4>
+            <p style="font-size: 0.95rem;">• <strong>Flask API Server:</strong> RESTful modular controllers with robust input validation.</p>
+            <p style="font-size: 0.95rem;">• <strong>Dual-Mode Engine:</strong> Rule-based heuristic analyzer + optional Gemini LLM adapter.</p>
+            <p style="font-size: 0.95rem;">• <strong>SQLite Repository:</strong> Persistent verification history &amp; custom dossier exports.</p>
+          </div>
+        </div>
+        <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--cyan);">
+          ✓ Complete offline capability: The platform operates with zero external dependencies when no API key is configured.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 4: Mandatory Automation -->
+    <div class="slide">
+      <div class="slide-tag">Slide 04 / Technical Innovation</div>
+      <h2 class="slide-title">Mandatory Automation: Claim-to-Checklist Pipeline</h2>
+      <div class="slide-content">
+        <p>A genuinely working end-to-end automation tool that transforms unstructured viral claims into structured, actionable investigative protocols:</p>
+        <div class="card-box" style="margin-top: 1rem;">
+          <ol style="padding-left: 1.5rem; line-height: 1.9; font-size: 1rem;">
+            <li><span class="highlight">Claim Ingestion &amp; Entity Extraction:</span> Dissects headline assertions, dates, and institutions.</li>
+            <li><span class="highlight">Threat Vector Classification:</span> Categorizes threat (phishing, financial fraud, medical misinformation).</li>
+            <li><span class="highlight">Custom 10-Step Protocol Generation:</span> Generates tailored search queries for accredited registries.</li>
+            <li><span class="highlight">State Tracking &amp; Dossier Export:</span> Allows users to record investigative notes and export Markdown dossiers.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 5: Experimental Evaluation -->
+    <div class="slide">
+      <div class="slide-tag">Slide 05 / Testing &amp; Results</div>
+      <h2 class="slide-title">Empirical Benchmark Testing (10 Scenarios)</h2>
+      <div class="slide-content">
+        <p>Validated across 10 benchmark test cases covering diverse misinformation categories:</p>
+        <div class="grid-2" style="font-size: 0.92rem;">
+          <div class="card-box">
+            <h4>Pass Rate &amp; Test Suite</h4>
+            <p>• <strong>15 / 15 Assertions Passed</strong> in automated Python unit tests (`tests/test_verification_benchmarks.py`).</p>
+            <p>• Genuine Claims: Correctly validated with high confidence from recognized `.gov.in` sources.</p>
+            <p>• Phishing &amp; Scams: 100% detection of urgency markers, `.top`/`.xyz` TLDs, and fake RBI notices.</p>
+          </div>
+          <div class="card-box">
+            <h4>Honest Uncertainty Handling</h4>
+            <p>• Ambiguous commercial claims (e.g. unpatented battery alloy) labeled strictly as <em>Unverified — more evidence required</em>.</p>
+            <p>• Zero synthetic hallucinations: Never invents non-existent citations or research results.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 6: Ethics & Responsible AI -->
+    <div class="slide">
+      <div class="slide-tag">Slide 06 / Governance &amp; Ethics</div>
+      <h2 class="slide-title">Ethics, Limitations &amp; Human-in-the-Loop</h2>
+      <div class="slide-content">
+        <div class="grid-2">
+          <div class="card-box">
+            <h4>The Limitations of Automated AI</h4>
+            <p style="font-size: 0.92rem;">• <strong>False Positives:</strong> Legitimate compressed media frequently triggers false alarms.</p>
+            <p style="font-size: 0.92rem;">• <strong>Adversarial Evasion:</strong> Micro-noise injection bypasses neural discriminators.</p>
+            <p style="font-size: 0.92rem;">• <strong>Doctrine:</strong> Algorithmic scores are <em>advisory</em>, never definitive judicial proof.</p>
+          </div>
+          <div class="card-box">
+            <h4>Responsible Implementation</h4>
+            <p style="font-size: 0.92rem;">• <strong>Zero Deceptive Generation:</strong> TruthLens does not generate deepfakes of real people.</p>
+            <p style="font-size: 0.92rem;">• <strong>Indian Regulatory Integration:</strong> Direct links &amp; protocols for National Cyber Helpline <strong>1930</strong> and <strong>cybercrime.gov.in</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 7: Conclusion -->
+    <div class="slide">
+      <div class="slide-tag">Slide 07 / Viva Defense Conclusion</div>
+      <h2 class="slide-title">Conclusion &amp; Future Scope</h2>
+      <div class="slide-content">
+        <p style="font-size: 1.2rem; color: var(--cyan); margin-bottom: 1rem;">
+          "Pause. Investigate. Verify."
+        </p>
+        <p>TruthLens AI provides a full-stack, academically grounded cybersecurity platform that shifts the paradigm from passive credulity to proactive digital forensic investigation.</p>
+        <div class="card-box" style="margin-top: 1.25rem;">
+          <h4>Future Milestones:</h4>
+          <p style="font-size: 0.95rem;">1. Integration with C2PA hardware cryptographic signature verification APIs.</p>
+          <p style="font-size: 0.95rem;">2. Lightweight Chrome browser extension for real-time lateral reading prompts.</p>
+          <p style="font-size: 0.95rem;">3. Multi-lingual regional Indian language NLP pipelines (Hindi, Tamil, Telugu, Bengali).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide Deck Controls -->
+    <div class="footer-nav">
+      <button class="nav-btn" onclick="prevSlide()">◀ Previous</button>
+      <div class="slide-counter" id="slide-num">Slide 1 of 7</div>
+      <button class="nav-btn" onclick="nextSlide()">Next ▶</button>
+    </div>
+  </div>
+
+  <script>
+    let cur = 0;
+    const slides = document.querySelectorAll('.slide');
+    const counter = document.getElementById('slide-num');
+
+    function update() {
+      slides.forEach((s, idx) => s.classList.toggle('active', idx === cur));
+      counter.textContent = `Slide ${cur + 1} of ${slides.length}`;
+    }
+    function nextSlide() {
+      if (cur < slides.length - 1) { cur++; update(); }
+    }
+    function prevSlide() {
+      if (cur > 0) { cur--; update(); }
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
+  </script>
+</body>
+</html>

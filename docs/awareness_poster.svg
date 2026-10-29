@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" width="1200" height="1600">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050811"/>
+      <stop offset="40%" stop-color="#0a1022"/>
+      <stop offset="100%" stop-color="#070b16"/>
+    </linearGradient>
+
+    <linearGradient id="cyanVioletGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+
+    <linearGradient id="shieldFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f1b36" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#14142b" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="rgba(16, 26, 48, 0.85)"/>
+      <stop offset="100%" stop-color="rgba(13, 21, 39, 0.85)"/>
+    </linearGradient>
+
+    <!-- Filters for Cyber Glow -->
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="1600" fill="url(#bgGrad)"/>
+
+  <!-- Cyber Grid Pattern Lines -->
+  <g opacity="0.12" stroke="#00f2fe" stroke-width="1">
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="0" y1="800" x2="1200" y2="800"/>
+    <line x1="0" y1="1000" x2="1200" y2="1000"/>
+    <line x1="0" y1="1200" x2="1200" y2="1200"/>
+    <line x1="0" y1="1400" x2="1200" y2="1400"/>
+    <line x1="200" y1="0" x2="200" y2="1600"/>
+    <line x1="400" y1="0" x2="400" y2="1600"/>
+    <line x1="600" y1="0" x2="600" y2="1600"/>
+    <line x1="800" y1="0" x2="800" y2="1600"/>
+    <line x1="1000" y1="0" x2="1000" y2="1600"/>
+  </g>
+
+  <!-- Ambient Radial Glows -->
+  <circle cx="200" cy="300" r="280" fill="#00f2fe" opacity="0.06"/>
+  <circle cx="1000" cy="1300" r="320" fill="#8b5cf6" opacity="0.06"/>
+
+  <!-- Top Academic Capstone Badge -->
+  <g transform="translate(600, 100)">
+    <rect x="-240" y="-22" width="480" height="44" rx="22" fill="rgba(139, 92, 246, 0.15)" stroke="#8b5cf6" stroke-width="1.5"/>
+    <text x="0" y="6" font-family="'Inter', -apple-system, sans-serif" font-size="16" font-weight="700" fill="#c4b5fd" text-anchor="middle" letter-spacing="2">
+      NATIONAL CYBERSECURITY AWARENESS CAMPAIGN
+    </text>
+  </g>
+
+  <!-- TruthLens Brand Crest & Logo Icon -->
+  <g transform="translate(600, 220)">
+    <!-- Concentric Target Reticle -->
+    <circle cx="0" cy="0" r="64" stroke="url(#cyanVioletGrad)" stroke-width="3" stroke-dasharray="10 5" opacity="0.8"/>
+    <circle cx="0" cy="0" r="76" stroke="#00f2fe" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.5"/>
+    <!-- Central Shield Crest -->
+    <path d="M0 -42 L38 -20 V16 C38 38 0 56 0 56 C0 56 -38 38 -38 16 V-20 Z" fill="url(#shieldFill)" stroke="#00f2fe" stroke-width="3" filter="url(#subtleGlow)"/>
+    <!-- Optical Lens Center -->
+    <circle cx="0" cy="4" r="22" stroke="#00f2fe" stroke-width="2.5" stroke-dasharray="6 3"/>
+    <circle cx="0" cy="4" r="9" fill="#00f2fe" filter="url(#cyanGlow)"/>
+    <!-- Reticle Crosshairs -->
+    <line x1="0" y1="-26" x2="0" y2="-14" stroke="#00f2fe" stroke-width="3"/>
+    <line x1="0" y1="22" x2="0" y2="34" stroke="#00f2fe" stroke-width="3"/>
+    <line x1="-30" y1="4" x2="-18" y2="4" stroke="#00f2fe" stroke-width="3"/>
+    <line x1="18" y1="4" x2="30" y2="4" stroke="#00f2fe" stroke-width="3"/>
+  </g>
+
+  <!-- Main Headline Title -->
+  <text x="600" y="345" font-family="'Inter', -apple-system, sans-serif" font-size="58" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="-1">
+    TruthLens AI
+  </text>
+  <text x="600" y="390" font-family="'Inter', -apple-system, sans-serif" font-size="24" font-weight="700" fill="url(#cyanVioletGrad)" text-anchor="middle" letter-spacing="4">
+    AI-POWERED DEEPFAKE &amp; MISINFORMATION DEFENSE
+  </text>
+
+  <!-- Tagline Core Pillar Banner -->
+  <g transform="translate(600, 470)">
+    <rect x="-420" y="-36" width="840" height="72" rx="36" fill="rgba(0, 242, 254, 0.08)" stroke="#00f2fe" stroke-width="2" filter="url(#subtleGlow)"/>
+    <text x="0" y="10" font-family="'Inter', -apple-system, sans-serif" font-size="32" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="2">
+      PAUSE.  INVESTIGATE.  VERIFY.
+    </text>
+  </g>
+
+  <!-- Three Core Action Columns / Action Cards -->
+  <!-- Card 1: PAUSE -->
+  <g transform="translate(140, 560)">
+    <rect width="280" height="380" rx="16" fill="url(#cardGrad)" stroke="rgba(0, 242, 254, 0.25)" stroke-width="1.5"/>
+    <circle cx="140" cy="70" r="36" fill="rgba(0, 242, 254, 0.1)" stroke="#00f2fe" stroke-width="2"/>
+    <text x="140" y="82" font-family="'Inter', sans-serif" font-size="36" text-anchor="middle" fill="#00f2fe">⏸️</text>
+    <text x="140" y="145" font-family="'Inter', sans-serif" font-size="24" font-weight="800" fill="#00f2fe" text-anchor="middle">1. PAUSE</text>
+    <text x="140" y="175" font-family="'Inter', sans-serif" font-size="14" font-weight="700" fill="#94a3b8" text-anchor="middle">Halt Viral Amplification</text>
+    <text x="30" y="215" font-family="'Inter', sans-serif" font-size="13" fill="#cbd5e1" width="220">
+      <tspan x="30" dy="0">• Beware of fake urgency:</tspan>
+      <tspan x="45" dy="20">"Forward before midnight"</tspan>
+      <tspan x="30" dy="30">• Notice extreme outrage</tspan>
+      <tspan x="45" dy="20">engineered to bypass logic.</tspan>
+      <tspan x="30" dy="30">• Don't click or share</tspan>
+      <tspan x="45" dy="20">on immediate impulse.</tspan>
+    </text>
+  </g>
+
+  <!-- Card 2: INVESTIGATE -->
+  <g transform="translate(460, 560)">
+    <rect width="280" height="380" rx="16" fill="url(#cardGrad)" stroke="rgba(139, 92, 246, 0.35)" stroke-width="1.5"/>
+    <circle cx="140" cy="70" r="36" fill="rgba(139, 92, 246, 0.1)" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="140" y="82" font-family="'Inter', sans-serif" font-size="36" text-anchor="middle" fill="#c4b5fd">🔍</text>
+    <text x="140" y="145" font-family="'Inter', sans-serif" font-size="24" font-weight="800" fill="#c4b5fd" text-anchor="middle">2. INVESTIGATE</text>
+    <text x="140" y="175" font-family="'Inter', sans-serif" font-size="14" font-weight="700" fill="#94a3b8" text-anchor="middle">Deploy Forensic Literacy</text>
+    <text x="30" y="215" font-family="'Inter', sans-serif" font-size="13" fill="#cbd5e1">
+      <tspan x="30" dy="0">• Reverse Image Search:</tspan>
+      <tspan x="45" dy="20">Check earliest date indexed.</tspan>
+      <tspan x="30" dy="30">• Deepfake Facial Clues:</tspan>
+      <tspan x="45" dy="20">Pupil highlights &amp; lip sync.</tspan>
+      <tspan x="30" dy="30">• Audit Domain URL:</tspan>
+      <tspan x="45" dy="20">Beware of .top, .xyz &amp; .click.</tspan>
+    </text>
+  </g>
+
+  <!-- Card 3: VERIFY -->
+  <g transform="translate(780, 560)">
+    <rect width="280" height="380" rx="16" fill="url(#cardGrad)" stroke="rgba(16, 185, 129, 0.35)" stroke-width="1.5"/>
+    <circle cx="140" cy="70" r="36" fill="rgba(16, 185, 129, 0.1)" stroke="#10b981" stroke-width="2"/>
+    <text x="140" y="82" font-family="'Inter', sans-serif" font-size="36" text-anchor="middle" fill="#34d399">🛡️</text>
+    <text x="140" y="145" font-family="'Inter', sans-serif" font-size="24" font-weight="800" fill="#34d399" text-anchor="middle">3. VERIFY</text>
+    <text x="140" y="175" font-family="'Inter', sans-serif" font-size="14" font-weight="700" fill="#94a3b8" text-anchor="middle">Demand Primary Sources</text>
+    <text x="30" y="215" font-family="'Inter', sans-serif" font-size="13" fill="#cbd5e1">
+      <tspan x="30" dy="0">• Locate official gazette</tspan>
+      <tspan x="45" dy="20">or statutory press release.</tspan>
+      <tspan x="30" dy="30">• Corroborate across 2+</tspan>
+      <tspan x="45" dy="20">accredited news wires.</tspan>
+      <tspan x="30" dy="30">• An HTTPS padlock does</tspan>
+      <tspan x="45" dy="20">NOT prove claims are true!</tspan>
+    </text>
+  </g>
+
+  <!-- Critical Warning Callout Box -->
+  <g transform="translate(140, 980)">
+    <rect width="920" height="180" rx="16" fill="rgba(239, 68, 68, 0.08)" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="40" y="45" font-family="'Inter', sans-serif" font-size="20" font-weight="800" fill="#f87171">
+      ⚠️ TOP CYBER SCAM RED FLAGS TO WATCH OUT FOR:
+    </text>
+    <text x="40" y="85" font-family="'Inter', sans-serif" font-size="15" fill="#f1f5f9">
+      <tspan x="40" dy="0">1. Electricity Disconnection SMS urging phone calls to 10-digit numbers or installing .apk files.</tspan>
+      <tspan x="40" dy="30">2. "Like YouTube Videos &amp; Earn ₹5,000/day" task schemes demanding crypto/Telegram deposits.</tspan>
+      <tspan x="40" dy="30">3. Fake Police / CBI "Digital Arrest" video calls extorting funds under threat of incarceration.</tspan>
+    </text>
+  </g>
+
+  <!-- Official Emergency Helplines (India) -->
+  <g transform="translate(140, 1195)">
+    <rect width="920" height="190" rx="16" fill="rgba(10, 22, 46, 0.95)" stroke="#00f2fe" stroke-width="2" filter="url(#subtleGlow)"/>
+    <text x="460" y="45" font-family="'Inter', sans-serif" font-size="20" font-weight="800" fill="#00f2fe" text-anchor="middle" letter-spacing="1">
+      OFFICIAL STATUTORY CYBER REPORTING PORTALS IN INDIA
+    </text>
+    
+    <!-- Helpline 1930 Box -->
+    <g transform="translate(60, 75)">
+      <rect width="370" height="80" rx="10" fill="rgba(239, 68, 68, 0.15)" stroke="#ef4444" stroke-width="1.5"/>
+      <text x="25" y="36" font-family="'Inter', sans-serif" font-size="14" font-weight="700" fill="#fca5a5">FINANCIAL CYBER FRAUD HELPLINE</text>
+      <text x="25" y="66" font-family="'Inter', sans-serif" font-size="28" font-weight="800" fill="#ffffff">DIAL 1930</text>
+      <text x="180" y="64" font-family="'Inter', sans-serif" font-size="12" fill="#94a3b8">(Immediate fund-freeze coordination)</text>
+    </g>
+
+    <!-- National Cyber Portal Box -->
+    <g transform="translate(490, 75)">
+      <rect width="370" height="80" rx="10" fill="rgba(0, 242, 254, 0.12)" stroke="#00f2fe" stroke-width="1.5"/>
+      <text x="25" y="36" font-family="'Inter', sans-serif" font-size="14" font-weight="700" fill="#38bdf8">NATIONAL REPORTING PORTAL</text>
+      <text x="25" y="66" font-family="'Inter', sans-serif" font-size="22" font-weight="800" fill="#ffffff">cybercrime.gov.in</text>
+    </g>
+  </g>
+
+  <!-- Poster Footer -->
+  <g transform="translate(600, 1450)">
+    <text x="0" y="0" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#94a3b8" text-anchor="middle">
+      TruthLens AI — AI-Powered Deepfake &amp; Misinformation Awareness Platform
+    </text>
+    <text x="0" y="26" font-family="'Inter', sans-serif" font-size="13" fill="#64748b" text-anchor="middle">
+      Academic Capstone Cybersecurity Project • Verified against CERT-In, PIB Fact Check &amp; C2PA Guidelines
+    </text>
+    <text x="0" y="52" font-family="'Inter', sans-serif" font-size="12" fill="#00f2fe" text-anchor="middle">
+      Access Platform &amp; Run Forensic Audits: http://127.0.0.1:5000
+    </text>
+  </g>
+</svg>

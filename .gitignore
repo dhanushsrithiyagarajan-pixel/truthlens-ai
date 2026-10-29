@@ -1,0 +1,31 @@
+# Environment variables
+.env
+.env.local
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# SQLite Database containing live data
+truthlens.db
+instance/
+
+# Uploaded user images and generated artifacts
+static/uploads/*
+!static/uploads/.gitkeep
+static/generated/*
+!static/generated/.gitkeep
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+venv/
+env/
+.venv/

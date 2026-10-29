@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TruthLens AI — Awareness Campaign Poster</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #03060c;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: sans-serif;
+    }
+    .poster-container {
+      max-width: 900px;
+      width: 100%;
+      box-shadow: 0 0 50px rgba(0, 242, 254, 0.25);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .print-btn {
+      margin: 20px 0;
+      background: linear-gradient(135deg, #00f2fe, #0284c7);
+      color: #070b14;
+      font-weight: 700;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .print-btn { display: none; }
+      .poster-container { box-shadow: none; border-radius: 0; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">🖨️ Print / Save High-Res PDF Poster</button>
+  <div class="poster-container">
+    <!-- Embeds the SVG poster -->
+    <img src="awareness_poster.svg" alt="TruthLens AI Cybersecurity Awareness Poster" style="width:100%; display:block;">
+  </div>
+</body>
+</html>

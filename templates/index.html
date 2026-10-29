@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TruthLens AI - AI-Powered Deepfake and Misinformation Awareness Platform. Pause. Investigate. Verify. Interactive cybersecurity education and forensic verification.">
+  <title>TruthLens AI — AI-Powered Deepfake & Misinformation Awareness Platform</title>
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Chart.js for data visualization -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <!-- TruthLens Custom Design System -->
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="brand-container" data-target="dashboard">
+      <!-- Unique TruthLens SVG Shield & Reticle Logo -->
+      <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="44" stroke="url(#cyanGrad)" stroke-width="3" stroke-dasharray="8 4" opacity="0.6"/>
+        <path d="M50 15 L78 30 V56 C78 72 50 86 50 86 C50 86 22 72 22 56 V30 L50 15 Z" fill="url(#shieldGrad)" stroke="#00f2fe" stroke-width="2.5"/>
+        <circle cx="50" cy="48" r="16" stroke="#00f2fe" stroke-width="2.5" stroke-dasharray="4 2"/>
+        <circle cx="50" cy="48" r="6" fill="#00f2fe"/>
+        <line x1="50" y1="26" x2="50" y2="34" stroke="#00f2fe" stroke-width="2.5"/>
+        <line x1="50" y1="62" x2="50" y2="70" stroke="#00f2fe" stroke-width="2.5"/>
+        <line x1="28" y1="48" x2="36" y2="48" stroke="#00f2fe" stroke-width="2.5"/>
+        <line x1="64" y1="48" x2="72" y2="48" stroke="#00f2fe" stroke-width="2.5"/>
+        <defs>
+          <linearGradient id="cyanGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00f2fe"/>
+            <stop offset="1" stop-color="#8b5cf6"/>
+          </linearGradient>
+          <linearGradient id="shieldGrad" x1="22" y1="15" x2="78" y2="86" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0e1b38" stop-opacity="0.95"/>
+            <stop offset="1" stop-color="#14142b" stop-opacity="0.9"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="brand-text">
+        <span class="brand-title">TruthLens AI</span>
+        <span class="brand-tagline">Pause. Investigate. Verify.</span>
+      </div>
+    </div>
+
+    <button class="nav-toggle-mobile" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">☰</button>
+
+    <nav class="nav-links" id="nav-links">
+      <li class="nav-item active" data-target="dashboard" id="nav-dashboard">📊 Dashboard</li>
+      <li class="nav-item" data-target="verify" id="nav-verify">🔍 Verify Claim</li>
+      <li class="nav-item" data-target="deepfake-lab" id="nav-deepfake-lab">🧪 Deepfake Lab</li>
+      <li class="nav-item" data-target="source-explorer" id="nav-source-explorer">🌐 Source Explorer</li>
+      <li class="nav-item" data-target="checklist" id="nav-checklist">📋 Checklist</li>
+      <li class="nav-item" data-target="automation" id="nav-automation">⚡ Automation</li>
+      <li class="nav-item" data-target="learning-hub" id="nav-learning-hub">📚 Learning Hub</li>
+      <li class="nav-item" data-target="quiz" id="nav-quiz">🎯 Scam Quiz</li>
+      <li class="nav-item" data-target="history" id="nav-history">📁 History</li>
+      <li class="nav-item" data-target="ethics" id="nav-ethics">⚖️ Ethics</li>
+      <button class="nav-action-btn" data-target="verify">
+        <span>+ New Audit</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main class="main-wrapper">
+
+    <!-- ==================== MODULE A: DASHBOARD VIEW ==================== -->
+    <section class="module-view active" id="view-dashboard">
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <div class="hero-badge">
+          <span>🛡️ Final-Year Cybersecurity Capstone Platform</span>
+        </div>
+        <h1 class="hero-title">
+          Combat Synthetic Media with <span class="hero-highlight">Evidence-Based Forensics</span>
+        </h1>
+        <p class="hero-subtitle">
+          An interactive verification suite engineered to help students, researchers, and citizens dissect viral claims, inspect deepfake anomalies, evaluate domain trust, and adhere to structured fact-checking protocols.
+        </p>
+        <div class="hero-cta-group">
+          <button class="btn-primary" data-target="verify">
+            <span>🔍 Verify a Suspicious Claim</span>
+          </button>
+          <button class="btn-secondary" data-target="deepfake-lab">
+            <span>🧪 Open Deepfake Lab</span>
+          </button>
+          <button class="btn-secondary" data-target="automation">
+            <span>⚡ Run Claim-to-Checklist Automation</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Feature Cards -->
+      <div class="quick-features-grid">
+        <div class="quick-card" data-target="verify">
+          <div class="quick-icon-box">🔍</div>
+          <div>
+            <div class="quick-card-title">Claim Decomposition</div>
+            <div class="quick-card-desc">7-stage factual separation & verdict rating</div>
+          </div>
+        </div>
+        <div class="quick-card" data-target="deepfake-lab">
+          <div class="quick-icon-box">🧪</div>
+          <div>
+            <div class="quick-card-title">Deepfake Forensics</div>
+            <div class="quick-card-desc">EXIF metadata & Error Level Analysis (ELA)</div>
+          </div>
+        </div>
+        <div class="quick-card" data-target="source-explorer">
+          <div class="quick-icon-box">🌐</div>
+          <div>
+            <div class="quick-card-title">Source Explorer</div>
+            <div class="quick-card-desc">Typosquatting & domain integrity audit</div>
+          </div>
+        </div>
+        <div class="quick-card" data-target="automation">
+          <div class="quick-icon-box">⚡</div>
+          <div>
+            <div class="quick-card-title">Checklist Automation</div>
+            <div class="quick-card-desc">Auto-synthesize tailored 10-step protocol</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Dashboard Metrics (Real Database Data) -->
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">📊 Platform Verification Analytics</h2>
+          <p class="section-subtitle">Real-time statistics computed directly from actual SQLite repository records.</p>
+        </div>
+      </div>
+
+      <div class="metrics-row">
+        <div class="metric-card">
+          <div class="metric-label">Total Verification Audits</div>
+          <div class="metric-value" id="metric-total-reports">0</div>
+          <div class="metric-sub" id="metric-user-reports">0 Live Submissions</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Benchmark Demonstrations</div>
+          <div class="metric-value" id="metric-demo-reports">0</div>
+          <div class="metric-sub">Educational Ground-Truth Samples</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Mean Confidence Score</div>
+          <div class="metric-value" id="metric-avg-confidence">0.0%</div>
+          <div class="metric-sub">Evidence Weighted Ratio</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Active Checklists Dossiers</div>
+          <div class="metric-value" id="metric-total-checklists">0</div>
+          <div class="metric-sub">Generated & Saved Protocols</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Quiz Completions</div>
+          <div class="metric-value" id="metric-quiz-attempts">0</div>
+          <div class="metric-sub" id="metric-avg-quiz">0% Avg Score</div>
+        </div>
+      </div>
+
+      <!-- Real-time Charts Grid -->
+      <div class="charts-grid">
+        <div class="chart-card">
+          <div class="chart-header">
+            <span>Audited Verdict Distribution</span>
+            <small style="color:var(--text-dim); font-size:0.75rem;">5 Standard Academic Labels</small>
+          </div>
+          <div class="chart-container">
+            <canvas id="chart-verdicts"></canvas>
+          </div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-header">
+            <span>Misinformation by Category</span>
+            <small style="color:var(--text-dim); font-size:0.75rem;">Domains & Threat Vectors</small>
+          </div>
+          <div class="chart-container">
+            <canvas id="chart-categories"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual Verification Workflow -->
+      <div class="workflow-box">
+        <h3 style="font-size:1.15rem; margin-bottom:0.25rem;">🔄 The TruthLens 7-Stage Evidence Verification Workflow</h3>
+        <p style="font-size:0.85rem; color:var(--text-muted);">
+          Every claim submitted to TruthLens AI passes through a systematic pipeline before generating an evidence-based assessment:
+        </p>
+        <div class="workflow-steps-flex">
+          <div class="wf-step">
+            <div class="wf-step-num">1</div>
+            <div class="wf-step-title">Claim Ingestion</div>
+            <div class="wf-step-desc">Deconstruct headline & extract core assertion</div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-num">2</div>
+            <div class="wf-step-title">Fact vs Opinion</div>
+            <div class="wf-step-desc">Isolate testable facts from emotive rhetoric</div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-num">3</div>
+            <div class="wf-step-title">Entities & Corroboration</div>
+            <div class="wf-step-desc">Identify numbers, dates, laws & entities</div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-num">4</div>
+            <div class="wf-step-title">Source Heuristics</div>
+            <div class="wf-step-desc">Check domain, TLD risk & protocol integrity</div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-num">5</div>
+            <div class="wf-step-title">Indicator Audit</div>
+            <div class="wf-step-desc">Scan for urgency, phishing & Ponzi patterns</div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-num">6</div>
+            <div class="wf-step-title">Evidence Synthesis</div>
+            <div class="wf-step-desc">Cross-reference verified facts & limitations</div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-num">7</div>
+            <div class="wf-step-title">Dossier Verdict</div>
+            <div class="wf-step-desc">Publish structured report & action advice</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Verification Activity Table -->
+      <div class="section-header">
+        <div>
+          <h3 class="section-title">🕒 Recent Verification Audits</h3>
+          <p class="section-subtitle">Real-time ledger of claims evaluated across the platform.</p>
+        </div>
+        <button class="btn-secondary" style="font-size:0.82rem; padding:0.4rem 0.9rem;" data-target="history">
+          View All History & Exports ➔
+        </button>
+      </div>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Submitted Claim</th>
+              <th>Category</th>
+              <th>Audit Verdict</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="recent-reports-body">
+            <tr>
+              <td colspan="5" style="text-align:center; padding:1.5rem; color:#64748b;">Loading recent records...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ==================== MODULE B: CLAIM VERIFICATION ==================== -->
+    <section class="module-view" id="view-verify">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">🔍 AI-Powered Claim Verification</h2>
+          <p class="section-subtitle">Dissect headlines and viral rumors using TruthLens AI's structured 7-stage verification engine.</p>
+        </div>
+      </div>
+
+      <!-- Quick Benchmark Samples Bar -->
+      <div style="margin-bottom:1.25rem; display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+        <span style="font-size:0.8rem; color:var(--text-muted); font-weight:600;">Load Pre-Configured Benchmark Claims:</span>
+        <button class="btn-secondary" style="font-size:0.75rem; padding:0.25rem 0.65rem;"
+          data-sample-claim="RBI issues alert warning that linking Aadhaar to PAN on unauthorized third-party links will lead to direct bank account debit."
+          data-sample-url="https://rbi-notice-alert.top/pan-link-warning"
+          data-sample-source="Viral Forward"
+          data-sample-category="finance">
+          Phishing/Finance Scam Sample
+        </button>
+        <button class="btn-secondary" style="font-size:0.75rem; padding:0.25rem 0.65rem;"
+          data-sample-claim="WHO announces complete eradication of all seasonal influenza variants through new universal vaccine protocol in 2026."
+          data-sample-url="https://global-health-news-wire.click/who-flu-cure"
+          data-sample-source="Health Wire"
+          data-sample-category="health">
+          Contradicted Health Claim
+        </button>
+        <button class="btn-secondary" style="font-size:0.75rem; padding:0.25rem 0.65rem;"
+          data-sample-claim="ISRO successfully launches indigenous quantum key distribution satellite demonstrator for defense communications."
+          data-sample-url="https://isro.gov.in/press-release-quantum-comms.html"
+          data-sample-source="PTI & ISRO"
+          data-sample-category="cybersecurity">
+          Verified Genuine Claim
+        </button>
+      </div>
+
+      <div class="form-card">
+        <form id="claim-verify-form">
+          <div class="form-group">
+            <label for="input-claim">Suspicious Headline or Online Claim *</label>
+            <textarea id="input-claim" required placeholder="Paste the claim, viral tweet, or forwarded news message here..."></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="input-source-url">Claim's Original URL <span class="label-hint">(optional)</span></label>
+              <input type="url" id="input-source-url" placeholder="https://example.com/breaking-article">
+            </div>
+            <div class="form-group">
+              <label for="input-source-name">Source Name / Platform</label>
+              <input type="text" id="input-source-name" placeholder="e.g. WhatsApp Forward, Twitter/X, News Blog">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="select-category">Category</label>
+              <select id="select-category">
+                <option value="cybersecurity">Cybersecurity & Online Scams</option>
+                <option value="finance">Finance & Banking</option>
+                <option value="health">Health & Medicine</option>
+                <option value="news">National & World News</option>
+                <option value="politics">Politics & Governance</option>
+                <option value="other" selected>Other / Unspecified</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="input-context">Where did you find this? <span class="label-hint">(optional context)</span></label>
+              <input type="text" id="input-context" placeholder="e.g. Received in neighborhood group, saw sponsored ad">
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary" id="verify-submit-btn" style="width:100%; justify-content:center; padding:1rem;">
+            <span>🔬 Run Evidence Verification Analysis</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Structured Verification Report Result -->
+      <div class="verification-result-box" id="verification-result-box">
+        <div class="result-header">
+          <div>
+            <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-muted); margin-bottom:0.25rem;">
+              TruthLens Evidence Assessment
+            </div>
+            <h3 class="result-title" id="res-main-claim">Claim Evaluation</h3>
+            <div style="display:flex; align-items:center; gap:0.75rem; flex-wrap:wrap; margin-top:0.5rem;">
+              <span id="res-verdict-badge" class="badge-verdict verdict-unverified">Verdict Pending</span>
+              <span style="font-size:0.78rem; color:var(--violet-primary); background:rgba(139,92,246,0.1); padding:0.25rem 0.6rem; border-radius:var(--radius-pill); border:1px solid var(--border-violet);" id="res-engine-mode">
+                TruthLens Fact-Check Engine
+              </span>
+            </div>
+          </div>
+          <div class="confidence-meter">
+            <span style="font-size:0.8rem; color:var(--text-muted);">Confidence:</span>
+            <div class="meter-bar-bg">
+              <div class="meter-bar-fill" id="res-confidence-bar" style="width: 50%;"></div>
+            </div>
+            <strong id="res-confidence-num" style="color:var(--cyan-primary);">50%</strong>
+          </div>
+        </div>
+
+        <!-- Section: Factual Statements vs Opinions -->
+        <div class="form-row">
+          <div class="result-section-box">
+            <div class="result-section-title">📋 Empirical Factual Assertions</div>
+            <ul class="bullet-list" id="res-facts-list"></ul>
+          </div>
+          <div class="result-section-box">
+            <div class="result-section-title">💬 Subjective / Opinion Statements</div>
+            <ul class="bullet-list" id="res-opinions-list"></ul>
+          </div>
+        </div>
+
+        <!-- Section: Corroboration Requirements -->
+        <div class="result-section-box">
+          <div class="result-section-title">🔍 Information Needing Independent Corroboration</div>
+          <ul class="bullet-list" id="res-needs-list"></ul>
+        </div>
+
+        <!-- Section: Evidence Summary & Indicators -->
+        <div class="result-section-box">
+          <div class="result-section-title">⚖️ Evidence & Reasoning Summary</div>
+          <p id="res-evidence-summary" style="font-size:0.92rem; color:var(--text-main); margin-bottom:0.75rem;"></p>
+          
+          <div id="res-indicators-container" style="display:none; margin-top:0.75rem; border-top:1px solid rgba(255,255,255,0.08); padding-top:0.75rem;">
+            <div style="font-size:0.85rem; font-weight:700; color:#f87171; margin-bottom:0.35rem;">
+              ⚠️ Suspicious Deception Indicators Detected:
+            </div>
+            <ul class="bullet-list danger" id="res-indicators-list"></ul>
+          </div>
+        </div>
+
+        <!-- Section: Recommendations -->
+        <div class="result-section-box">
+          <div class="result-section-title">💡 Recommended Next Steps</div>
+          <ul class="bullet-list" id="res-recommendations-list"></ul>
+        </div>
+
+        <!-- Section: Limitations & Academic Disclaimer -->
+        <div style="background:rgba(0,0,0,0.3); border-left:3px solid var(--violet-primary); padding:0.85rem 1rem; border-radius:0 var(--radius-sm) var(--radius-sm) 0; font-size:0.82rem; color:var(--text-muted); margin-bottom:1.5rem;">
+          <strong>Academic & Ethical Limitation:</strong> <span id="res-limitations"></span>
+        </div>
+
+        <!-- Action Buttons for Report -->
+        <div style="display:flex; align-items:center; gap:0.85rem; flex-wrap:wrap;">
+          <button class="btn-primary" onclick="convertCurrentClaimToChecklist()">
+            <span>⚡ Convert to Interactive 10-Step Checklist</span>
+          </button>
+          <button class="btn-secondary" onclick="exportCurrentReport('markdown')">
+            <span>📄 Export Dossier (Markdown)</span>
+          </button>
+          <button class="btn-secondary" onclick="exportCurrentReport('json')">
+            <span>💾 Export JSON</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MODULE C: DEEPFAKE LAB ==================== -->
+    <section class="module-view" id="view-deepfake-lab">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">🧪 Deepfake Awareness & Image Forensics Lab</h2>
+          <p class="section-subtitle">Inspect visual media for synthetic anomalies, extract embedded EXIF camera metadata, and run Error Level Analysis (ELA).</p>
+        </div>
+      </div>
+
+      <div class="form-card" style="margin-bottom:1.5rem;">
+        <input type="file" id="image-file-input" accept="image/jpeg,image/png,image/webp" style="display:none;">
+        <div class="upload-dropzone" id="image-dropzone">
+          <div class="dropzone-icon">📷</div>
+          <h3 style="font-size:1.15rem; margin-bottom:0.35rem;">Drag & Drop Image Here, or Click to Browse</h3>
+          <p style="font-size:0.82rem; color:var(--text-muted);" id="dropzone-filename">
+            Supports JPEG, PNG, WEBP (Max 5MB). Files are analyzed securely in educational demo sandbox.
+          </p>
+        </div>
+      </div>
+
+      <!-- Forensic Results Container -->
+      <div id="image-lab-results" style="display:none;">
+        <!-- Visual Inconsistency Checklist -->
+        <div class="form-card" style="margin-bottom:1.5rem;">
+          <h3 style="font-size:1.1rem; margin-bottom:0.35rem;">👁️ Visual Inconsistency Checklist</h3>
+          <p style="font-size:0.82rem; color:var(--text-muted);">
+            Check any anomalies you observe in the visual media before running algorithmic forensics:
+          </p>
+          <div class="checklist-grid">
+            <label class="checkbox-label">
+              <input type="checkbox" class="visual-check-box" data-check-key="ear_asymmetry">
+              <span>Asymmetric or deformed earlobes/earrings</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" class="visual-check-box" data-check-key="pupil_reflection_mismatch">
+              <span>Inconsistent specular eye/pupil reflections</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" class="visual-check-box" data-check-key="teeth_blur_uniformity">
+              <span>Unnatural dental uniformity or teeth blur</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" class="visual-check-box" data-check-key="background_warping">
+              <span>Warped architectural straight lines in background</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" class="visual-check-box" data-check-key="skin_over_smoothing">
+              <span>Overly smoothed porcelain skin texture</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" class="visual-check-box" data-check-key="unnatural_lighting_direction">
+              <span>Lighting angles contradict background shadows</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" class="visual-check-box" data-check-key="hand_anatomy_anomalies">
+              <span>Anomalous fingers or hand anatomy (extra digits)</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" class="visual-check-box" data-check-key="jewelry_clothing_discontinuity">
+              <span>Discontinuous glasses frames or collar seams</span>
+            </label>
+          </div>
+
+          <button class="btn-primary" id="run-image-analysis-btn" style="margin-top:0.75rem;">
+            <span>🔬 Run Forensic Analysis & Error Level Analysis (ELA)</span>
+          </button>
+        </div>
+
+        <!-- Previews Grid: Original vs Error Level Analysis -->
+        <div class="image-preview-grid">
+          <div class="image-view-card">
+            <h4>Original Uploaded Image</h4>
+            <img id="preview-original" class="image-display" alt="Original Image Preview">
+          </div>
+          <div class="image-view-card" id="ela-container">
+            <h4>Error Level Analysis (ELA) Derivative</h4>
+            <p style="font-size:0.75rem; color:var(--text-dim); margin-top:0.25rem;">
+              Highlights differences in JPEG compression levels. High-contrast white edges indicate modified or spliced elements.
+            </p>
+            <img id="preview-ela" class="image-display" alt="ELA Derivative Preview">
+          </div>
+        </div>
+
+        <!-- EXIF Metadata & Synthesis Findings Table -->
+        <div class="form-card" style="margin-top:1.5rem;">
+          <h3 style="font-size:1.1rem; margin-bottom:1rem;">📋 Technical Metadata & Camera Fingerprint</h3>
+          <table class="data-table">
+            <tbody>
+              <tr>
+                <td style="width:250px; font-weight:600; color:var(--text-muted);">Image Dimensions</td>
+                <td id="meta-dimensions">Checking...</td>
+              </tr>
+              <tr>
+                <td style="font-weight:600; color:var(--text-muted);">Camera Make & Model</td>
+                <td id="meta-camera">Checking...</td>
+              </tr>
+              <tr>
+                <td style="font-weight:600; color:var(--text-muted);">Software / Generator Signature</td>
+                <td id="meta-software">Checking...</td>
+              </tr>
+              <tr>
+                <td style="font-weight:600; color:var(--text-muted);">Original Timestamp</td>
+                <td id="meta-datetime">Checking...</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="margin-top:1.25rem;">
+            <h4 style="font-size:0.95rem; color:var(--cyan-primary); margin-bottom:0.5rem;">Forensic Assessment & Clues:</h4>
+            <div style="font-size:1.1rem; font-weight:700; margin-bottom:0.35rem;" id="image-assessment-verdict"></div>
+            <p style="font-size:0.88rem; color:var(--text-main); margin-bottom:0.75rem;" id="image-assessment-summary"></p>
+            <ul class="bullet-list" id="image-indicators-list"></ul>
+          </div>
+
+          <!-- Reverse Image Search Helper -->
+          <div style="margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid var(--border-subtle);">
+            <h4 style="font-size:0.92rem; margin-bottom:0.4rem;">🌐 Reverse Image Search & Provenance Tools:</h4>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.75rem;">
+              Verify whether this image exists elsewhere on the internet under a different caption or earlier date:
+            </p>
+            <div style="display:flex; gap:0.65rem; flex-wrap:wrap;" id="reverse-search-tools-container"></div>
+          </div>
+
+          <!-- Critical Academic Disclaimer -->
+          <div style="margin-top:1.5rem; background:rgba(239,68,68,0.08); border-left:3px solid var(--crimson-danger); padding:0.85rem 1rem; border-radius:0 var(--radius-sm) var(--radius-sm) 0; font-size:0.82rem; color:#fca5a5;">
+            <strong>Mandatory Forensic Disclaimer:</strong> No software algorithm or basic inspection tool can definitively prove an image is synthetic or authentic. Absence of EXIF metadata is standard on WhatsApp, Instagram, and Twitter (X) due to privacy stripping. Always corroborate visual evidence with trusted news wires and provenance frameworks (e.g. C2PA).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MODULE D: SOURCE EXPLORER ==================== -->
+    <section class="module-view" id="view-source-explorer">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">🌐 Source Credibility Explorer</h2>
+          <p class="section-subtitle">Examine domain anatomy, encryption protocols, typo-squatting risks, and editorial transparency markers.</p>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <form id="source-inspect-form">
+          <div class="form-group">
+            <label for="input-inspect-url">Enter Source Website or Article URL</label>
+            <input type="url" id="input-inspect-url" required placeholder="https://news-channel-update.top/article-headline">
+          </div>
+          <button type="submit" class="btn-primary" id="source-inspect-btn">
+            <span>🔬 Audit Source Credibility</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Source Inspection Results -->
+      <div class="form-card" id="source-inspection-results" style="display:none; margin-top:1.75rem;">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem; flex-wrap:wrap; gap:1rem;">
+          <div>
+            <div style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted);">Domain Anatomy Assessment</div>
+            <h3 style="font-size:1.4rem; color:#fff;" id="inspect-domain-name">example.com</h3>
+            <div style="display:flex; gap:0.5rem; margin-top:0.35rem;">
+              <span class="badge-verdict" id="inspect-tier-badge">Checking...</span>
+              <span style="font-size:0.75rem; background:rgba(255,255,255,0.08); padding:0.25rem 0.6rem; border-radius:var(--radius-pill);" id="inspect-protocol">HTTPS</span>
+              <span style="font-size:0.75rem; background:rgba(255,255,255,0.08); padding:0.25rem 0.6rem; border-radius:var(--radius-pill);" id="inspect-tld">.com</span>
+            </div>
+          </div>
+          <div style="text-align:right;">
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.25rem;">Calculated Risk Meter</div>
+            <div style="width:140px; height:8px; background:rgba(255,255,255,0.1); border-radius:4px; overflow:hidden; margin-bottom:0.3rem;">
+              <div id="inspect-risk-bar" style="height:100%; width:0%; transition:width 0.4s ease;"></div>
+            </div>
+            <span style="font-size:0.85rem; font-weight:700;" id="inspect-risk-score">0 / 100 Risk</span>
+          </div>
+        </div>
+
+        <div class="form-row" style="margin-bottom:1.25rem;">
+          <div class="result-section-box">
+            <div class="result-section-title" style="color:#34d399;">✓ Positive Structural Indicators</div>
+            <ul class="bullet-list" id="inspect-positive-list"></ul>
+          </div>
+          <div class="result-section-box">
+            <div class="result-section-title" style="color:#f87171;">⚠️ Caution & Suspicion Indicators</div>
+            <ul class="bullet-list danger" id="inspect-caution-list"></ul>
+          </div>
+        </div>
+
+        <div class="result-section-box">
+          <div class="result-section-title">💡 Critical Educational Guidance</div>
+          <ul class="bullet-list" id="inspect-guidance-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MODULE E: INTERACTIVE CHECKLIST ==================== -->
+    <section class="module-view" id="view-checklist">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">📋 Interactive Verification Checklist & Dossier</h2>
+          <p class="section-subtitle">Execute a rigorous 10-step fact-checking procedure, record forensic notes, and compile an academic verification dossier.</p>
+        </div>
+        <div style="display:flex; gap:0.5rem;">
+          <button class="btn-primary" id="checklist-save-btn">
+            <span>💾 Save Checklist State</span>
+          </button>
+          <button class="btn-secondary" id="checklist-print-btn">
+            <span>🖨️ Print / Save PDF Dossier</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Active Claim Header -->
+      <div class="form-card" style="margin-bottom:1.5rem;">
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+          <div>
+            <div style="font-size:0.75rem; text-transform:uppercase; color:var(--cyan-primary); font-weight:700;" id="checklist-category-display">
+              Category: General
+            </div>
+            <h3 style="font-size:1.25rem;" id="checklist-claim-display">General Verification Protocol</h3>
+          </div>
+          <div style="text-align:right;">
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.25rem;" id="checklist-progress-text">
+              0 of 10 Steps Completed (0%)
+            </div>
+            <div style="width:160px; height:8px; background:rgba(255,255,255,0.1); border-radius:4px; overflow:hidden;">
+              <div id="checklist-progress-bar" style="height:100%; width:0%; background:linear-gradient(90deg, var(--cyan-primary), var(--emerald-success)); transition:width 0.3s ease;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10 Steps Container -->
+      <div class="checklist-stepper" id="checklist-steps-container"></div>
+
+      <!-- Final Dossier Verdict & Submission -->
+      <div class="form-card" style="margin-top:2rem;">
+        <h3 style="font-size:1.15rem; margin-bottom:1rem;">🎯 Final Dossier Assessment & Synthesis</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="checklist-final-verdict">Assigned Final Verdict</label>
+            <select id="checklist-final-verdict">
+              <option value="Supported by available evidence">Supported by available evidence</option>
+              <option value="Contradicted by available evidence">Contradicted by available evidence</option>
+              <option value="Misleading or missing context">Misleading or missing context</option>
+              <option value="Unverified — more evidence required" selected>Unverified — more evidence required</option>
+              <option value="Suspicious indicators detected">Suspicious indicators detected</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="checklist-final-notes">Investigator Executive Summary</label>
+            <textarea id="checklist-final-notes" placeholder="Summarize your final findings and reasons for this verdict..."></textarea>
+          </div>
+        </div>
+        <p style="font-size:0.78rem; color:var(--text-muted); margin-top:0.5rem;">
+          Notice: Completing all checklist steps does NOT automatically prove that a claim is authentic; it confirms that due diligence was completed according to digital forensic guidelines.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== MODULE I: MANDATORY AUTOMATION ==================== -->
+    <section class="module-view" id="view-automation">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">⚡ Suspicious Claim to Verification Checklist Automation</h2>
+          <p class="section-subtitle">
+            Mandatory Capstone Automation: Ingests any raw claim, extracts the core assertion, infers the threat vector, and synthesizes a tailored 10-step verification protocol.
+          </p>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <form id="automation-form">
+          <div class="form-group">
+            <label for="auto-claim-input">Enter Raw Suspicious Claim or Forwarded Message *</label>
+            <textarea id="auto-claim-input" required placeholder="e.g. Free ₹10,000 scholarship bonus distributed to all university students who click link within 24 hours..."></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="auto-category-select">Domain Category (Auto-refined if unspecified)</label>
+              <select id="auto-category-select">
+                <option value="other">Auto-detect from text</option>
+                <option value="finance">Finance / Banking</option>
+                <option value="cybersecurity">Cybersecurity / Phishing</option>
+                <option value="health">Health / Medical</option>
+                <option value="politics">Politics / Government</option>
+                <option value="news">News / Breaking Wire</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="auto-source-url">Attached Source URL <span class="label-hint">(optional)</span></label>
+              <input type="url" id="auto-source-url" placeholder="https://pm-scheme-funds.click/apply">
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary" id="auto-run-btn" style="width:100%; justify-content:center; padding:1rem;">
+            <span>⚡ Automatically Generate Custom 10-Step Verification Protocol</span>
+          </button>
+        </form>
+      </div>
+
+      <div class="workflow-box" style="margin-top:2rem;">
+        <h4 style="font-size:1rem; margin-bottom:0.5rem; color:var(--cyan-primary);">How This Automation Operates:</h4>
+        <ol style="font-size:0.85rem; color:var(--text-muted); padding-left:1.25rem; line-height:1.7;">
+          <li><strong>Entity Extraction:</strong> Parses core subject, numbers, institutions, and assertions.</li>
+          <li><strong>Issue Categorization:</strong> Maps content against known threat patterns (phishing, deepfake impersonation, task scam).</li>
+          <li><strong>Targeted Query Generation:</strong> Formulates Boolean search queries tailored to accredited fact-checking repositories.</li>
+          <li><strong>Database Synchronization:</strong> Stores the generated checklist into SQLite and opens it in the Interactive Dossier Editor.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==================== MODULE F: LEARNING HUB ==================== -->
+    <section class="module-view" id="view-learning-hub">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">📚 Public Awareness & Cyber Safety Learning Hub</h2>
+          <p class="section-subtitle">Official educational guidance on deepfakes, online scams, and statutory reporting channels in India.</p>
+        </div>
+      </div>
+
+      <div class="charts-grid" style="grid-template-columns: 1fr 1fr; margin-bottom:2rem;">
+        <div class="form-card">
+          <h3 style="font-size:1.15rem; color:var(--cyan-primary); margin-bottom:0.5rem;">🎭 1. What is a Deepfake?</h3>
+          <p style="font-size:0.88rem; color:var(--text-main); margin-bottom:0.75rem;">
+            Deepfakes are synthetic audio, video, or photo manipulations generated using artificial neural networks—predominantly generative adversarial networks (GANs) and latent diffusion models.
+          </p>
+          <ul class="bullet-list">
+            <li><strong>Face Swapping:</strong> Replacing a target individual's face onto another body.</li>
+            <li><strong>Voice Cloning:</strong> Synthesizing authentic-sounding vocal timbre from as little as 3 seconds of reference audio.</li>
+            <li><strong>Lip-Sync Dubbing:</strong> Modifying mouth movements to match an artificial or fabricated speech track.</li>
+          </ul>
+        </div>
+
+        <div class="form-card">
+          <h3 style="font-size:1.15rem; color:var(--cyan-primary); margin-bottom:0.5rem;">⚠️ 2. Misinformation vs. Disinformation</h3>
+          <p style="font-size:0.88rem; color:var(--text-main); margin-bottom:0.75rem;">
+            The academic distinction hinges entirely on <strong>intent</strong>:
+          </p>
+          <ul class="bullet-list">
+            <li><strong>Misinformation:</strong> False or inaccurate information shared without harmful intent (e.g., an authentic 2018 photo forwarded under the mistaken belief it shows a 2026 event).</li>
+            <li><strong>Disinformation:</strong> Deliberately fabricated deception designed to manipulate elections, steal financial assets, or incite public unrest.</li>
+            <li><strong>Malinformation:</strong> Genuine information shared out of context with malicious intent.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- India Cybercrime Guidance Section -->
+      <div class="form-card" style="border-color:var(--border-bright); margin-bottom:2rem;">
+        <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+          <span style="font-size:1.5rem;">🇮🇳</span>
+          <h3 style="font-size:1.2rem; color:#fff;">Official Scam Reporting & Regulatory Portals in India</h3>
+        </div>
+        <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:1.25rem;">
+          If you or someone you know encounters digital fraud, deepfake extortion, or financial cybercrime, utilize these statutory emergency portals:
+        </p>
+
+        <div class="quick-features-grid" style="margin-bottom:0;">
+          <div class="quick-card" style="cursor:default;">
+            <div class="quick-icon-box" style="color:#ef4444; background:rgba(239,68,68,0.1);">📞</div>
+            <div>
+              <div class="quick-card-title">Helpline 1930</div>
+              <div class="quick-card-desc">National Cyber Financial Fraud Helpline (Immediate fund-freeze coordination)</div>
+            </div>
+          </div>
+          <div class="quick-card" onclick="window.open('https://cybercrime.gov.in', '_blank')">
+            <div class="quick-icon-box">🛡️</div>
+            <div>
+              <div class="quick-card-title">cybercrime.gov.in</div>
+              <div class="quick-card-desc">National Cyber Crime Reporting Portal (MHA / I4C)</div>
+            </div>
+          </div>
+          <div class="quick-card" onclick="window.open('https://www.cert-in.org.in', '_blank')">
+            <div class="quick-icon-box">🚨</div>
+            <div>
+              <div class="quick-card-title">CERT-In Advisories</div>
+              <div class="quick-card-desc">Indian Computer Emergency Response Team security alerts & vulnerability bulletins</div>
+            </div>
+          </div>
+          <div class="quick-card" onclick="window.open('https://factcheck.pib.gov.in', '_blank')">
+            <div class="quick-icon-box">📰</div>
+            <div>
+              <div class="quick-card-title">PIB Fact Check</div>
+              <div class="quick-card-desc">Official Press Information Bureau verification of government policy & circulars</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Common Scam Blueprints -->
+      <div class="charts-grid" style="grid-template-columns: 1fr 1fr;">
+        <div class="form-card">
+          <h3 style="font-size:1.05rem; color:#38bdf8; margin-bottom:0.5rem;">🎣 Common Phishing & Task Scams</h3>
+          <ul class="bullet-list">
+            <li><strong>Utility Disconnection SMS:</strong> "Electricity disconnected tonight" urging call to personal mobile or APK download.</li>
+            <li><strong>YouTube / Map Review Job:</strong> Small initial payout (₹200) followed by demand for large crypto deposits to unlock VIP tasks.</li>
+            <li><strong>Fake Digital Arrest:</strong> Scammers posing as police/CBI on video call threatening immediate detention unless money is wired.</li>
+          </ul>
+        </div>
+        <div class="form-card">
+          <h3 style="font-size:1.05rem; color:#38bdf8; margin-bottom:0.5rem;">🔍 Five Rules for Safe Sharing</h3>
+          <ul class="bullet-list">
+            <li><strong>Rule 1:</strong> Pause 30 seconds before forwarding any message that triggers extreme anger, panic, or urgency.</li>
+            <li><strong>Rule 2:</strong> Check the source domain—an HTTPS padlock does NOT prove facts are true.</li>
+            <li><strong>Rule 3:</strong> Perform a reverse image search on dramatic photographs.</li>
+            <li><strong>Rule 4:</strong> Never install an `.apk` file sent via WhatsApp or Telegram.</li>
+            <li><strong>Rule 5:</strong> Corroborate major announcements across at least two accredited primary news agencies.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MODULE G: SCAM QUIZ ==================== -->
+    <section class="module-view" id="view-quiz">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">🎯 Scam & Misinformation Awareness Quiz</h2>
+          <p class="section-subtitle">Test your digital forensic judgment across 10 realistic cybersecurity scenarios.</p>
+        </div>
+      </div>
+
+      <!-- Quiz Intro State -->
+      <div class="quiz-card" id="quiz-intro-card" style="text-align:center;">
+        <div style="font-size:3rem; margin-bottom:0.75rem;">🛡️</div>
+        <h3 style="font-size:1.5rem; margin-bottom:0.5rem;">Ready to Put Your Fact-Checking Skills to the Test?</h3>
+        <p style="font-size:0.92rem; color:var(--text-muted); max-width:540px; margin:0 auto 1.5rem;">
+          This 10-question interactive challenge covers synthetic media, utility phishing, provenance checks, and statutory reporting in India. Immediate forensic explanations follow every answer.
+        </p>
+        <button class="btn-primary" onclick="startQuiz()" style="margin:0 auto;">
+          <span>Start 10-Question Challenge ➔</span>
+        </button>
+      </div>
+
+      <!-- Quiz Active Question State -->
+      <div class="quiz-card" id="quiz-active-card" style="display:none;">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-fill" id="quiz-progress-fill" style="width:0%;"></div>
+        </div>
+        <div style="display:flex; justify-content:space-between; font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem;">
+          <span id="quiz-counter-text">Question 1 of 10</span>
+          <span>Topic: Cyber Forensics & Verification</span>
+        </div>
+
+        <h3 style="font-size:1.15rem; line-height:1.45; margin-bottom:1.25rem;" id="quiz-question-text">Loading question...</h3>
+
+        <div class="quiz-options-list" id="quiz-options-container"></div>
+
+        <div class="quiz-explanation-box" id="quiz-explanation-box">
+          <div style="font-weight:700; color:var(--cyan-primary); font-size:0.85rem; margin-bottom:0.35rem;">
+            💡 Why this matters (Forensic Explanation):
+          </div>
+          <p id="quiz-explanation-text" style="font-size:0.88rem; color:var(--text-main);"></p>
+        </div>
+
+        <div style="text-align:right; margin-top:1.5rem;">
+          <button class="btn-primary" id="quiz-next-btn" style="display:none;" onclick="handleQuizNext()">
+            <span>Next Question ➔</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quiz Results State -->
+      <div class="quiz-card" id="quiz-results-card" style="display:none; text-align:center;">
+        <div style="font-size:3rem; margin-bottom:0.5rem;">🏆</div>
+        <h3 style="font-size:1.6rem; margin-bottom:0.25rem;" id="quiz-achievement-badge">Quiz Completed</h3>
+        <div style="font-size:2.5rem; font-weight:800; color:var(--cyan-primary); font-family:var(--font-mono); margin:0.75rem 0;" id="quiz-final-score">
+          0 / 10
+        </div>
+        <div style="font-size:1rem; color:var(--text-muted); margin-bottom:1rem;" id="quiz-final-percentage">0% Accuracy</div>
+        <p style="font-size:0.92rem; color:var(--text-main); max-width:540px; margin:0 auto 1.75rem;" id="quiz-summary-text"></p>
+
+        <div style="display:flex; justify-content:center; gap:1rem;">
+          <button class="btn-primary" onclick="resetQuizState()">
+            <span>🔄 Retake Quiz</span>
+          </button>
+          <button class="btn-secondary" data-target="learning-hub">
+            <span>📚 Review Learning Hub</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MODULE H: REPORT HISTORY & EXPORT ==================== -->
+    <section class="module-view" id="view-history">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">📁 Verification Report History & Dossier Exports</h2>
+          <p class="section-subtitle">Audit past verification evaluations stored in the SQLite repository. Filter, inspect, or export dossiers.</p>
+        </div>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="form-card" style="margin-bottom:1.5rem; padding:1.25rem;">
+        <div class="form-row" style="grid-template-columns: 1fr 1fr 2fr;">
+          <div class="form-group" style="margin-bottom:0;">
+            <label for="history-filter-category" style="font-size:0.8rem;">Filter by Category</label>
+            <select id="history-filter-category">
+              <option value="all">All Categories</option>
+              <option value="cybersecurity">Cybersecurity</option>
+              <option value="finance">Finance</option>
+              <option value="health">Health</option>
+              <option value="news">News</option>
+              <option value="politics">Politics</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label for="history-filter-verdict" style="font-size:0.8rem;">Filter by Verdict</label>
+            <select id="history-filter-verdict">
+              <option value="all">All Verdicts</option>
+              <option value="Supported by available evidence">Supported</option>
+              <option value="Contradicted by available evidence">Contradicted</option>
+              <option value="Misleading or missing context">Misleading</option>
+              <option value="Unverified — more evidence required">Unverified</option>
+              <option value="Suspicious indicators detected">Suspicious</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label for="history-search-input" style="font-size:0.8rem;">Search Claim or Source</label>
+            <input type="text" id="history-search-input" placeholder="Type keyword to search SQLite repository...">
+          </div>
+        </div>
+      </div>
+
+      <!-- History Table -->
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Evaluated Claim</th>
+              <th>Category</th>
+              <th>Verdict</th>
+              <th>Confidence</th>
+              <th>Created At</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="history-table-body">
+            <tr>
+              <td colspan="7" style="text-align:center; padding:2rem; color:#64748b;">Loading history records...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ==================== MODULE J: ETHICS & RESPONSIBLE AI ==================== -->
+    <section class="module-view" id="view-ethics">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">⚖️ Ethics & Responsible AI Statement</h2>
+          <p class="section-subtitle">Academic principles, technical limitations, and the critical role of human oversight in media verification.</p>
+        </div>
+      </div>
+
+      <div class="charts-grid" style="grid-template-columns: 1fr 1fr; margin-bottom:2rem;">
+        <div class="form-card">
+          <h3 style="font-size:1.15rem; color:var(--cyan-primary); margin-bottom:0.75rem;">1. Probabilistic Classification & False Alarms</h3>
+          <p style="font-size:0.88rem; color:var(--text-main); line-height:1.65;">
+            No machine learning detector operates with 100% accuracy. Detectors are susceptible to:
+          </p>
+          <ul class="bullet-list">
+            <li><strong>False Positives:</strong> An authentic, grainy security camera video or compressed WhatsApp clip flagged as AI-generated due to compression artifacts.</li>
+            <li><strong>False Negatives:</strong> A cutting-edge diffusion model or skilled post-production composite slipping past detectors without triggering standard heuristics.</li>
+          </ul>
+        </div>
+
+        <div class="form-card">
+          <h3 style="font-size:1.15rem; color:var(--cyan-primary); margin-bottom:0.75rem;">2. Hallucinations & Evidence Sourcing</h3>
+          <p style="font-size:0.88rem; color:var(--text-main); line-height:1.65;">
+            TruthLens AI strictly prohibits the fabrication of non-existent sources, URLs, or citations. When live verification data is unavailable, the platform honestly labels claims as <strong>Unverified — more evidence required</strong> rather than hallucinating corroboration.
+          </p>
+        </div>
+      </div>
+
+      <div class="form-card" style="margin-bottom:2rem;">
+        <h3 style="font-size:1.15rem; color:#fff; margin-bottom:0.75rem;">3. Privacy, Copyright & Deceptive Generation Constraints</h3>
+        <ul class="bullet-list">
+          <li><strong>No Deceptive Synthesis:</strong> TruthLens AI does not generate deceptive deepfakes of real individuals, public figures, or private citizens.</li>
+          <li><strong>Educational Isolation:</strong> All forensics are performed for academic literacy and defense training.</li>
+          <li><strong>Data Minimization:</strong> The platform does not harvest private biometric imagery or log unnecessary personal data.</li>
+        </ul>
+      </div>
+
+      <div class="workflow-box">
+        <h3 style="font-size:1.1rem; color:var(--cyan-primary); margin-bottom:0.5rem;">4. The Indispensable Role of Human-in-the-Loop Review</h3>
+        <p style="font-size:0.88rem; color:var(--text-main); line-height:1.7;">
+          Automated tools serve as <em>advisors</em>, not judges. Final judgments regarding credibility, malice, and authenticity must always involve human discernment, multi-source corroboration, and adherence to legal due process.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Detail Modal for Viewing Full Reports -->
+  <div class="modal-overlay" id="report-detail-modal">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeModal('report-detail-modal')">&times;</button>
+      <div style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.25rem;">
+        Verification Dossier Detail
+      </div>
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
+        <h3 style="font-size:1.4rem; color:#fff;" id="modal-report-id">#0</h3>
+        <span style="font-size:0.78rem; color:var(--violet-primary);" id="modal-report-type">Record</span>
+      </div>
+
+      <div class="result-section-box">
+        <div class="result-section-title">Submitted Claim:</div>
+        <p id="modal-claim-text" style="font-size:0.92rem; color:#fff; font-weight:500;"></p>
+        <div style="font-size:0.78rem; color:var(--text-dim); margin-top:0.4rem;" id="modal-source-info"></div>
+      </div>
+
+      <div style="display:flex; gap:1rem; margin-bottom:1rem; flex-wrap:wrap;">
+        <div style="flex:1;">
+          <span style="font-size:0.8rem; color:var(--text-muted);">Assigned Verdict:</span>
+          <div style="margin-top:0.25rem;">
+            <span id="modal-verdict-badge" class="badge-verdict">Verdict</span>
+          </div>
+        </div>
+        <div style="flex:1;">
+          <span style="font-size:0.8rem; color:var(--text-muted);">Confidence Score:</span>
+          <div style="font-size:1.15rem; font-weight:700; color:var(--cyan-primary); margin-top:0.25rem;" id="modal-confidence">
+            0%
+          </div>
+        </div>
+      </div>
+
+      <div class="result-section-box">
+        <div class="result-section-title">Main Factual Assertion:</div>
+        <p id="modal-main-claim" style="font-size:0.88rem;"></p>
+      </div>
+
+      <div class="result-section-box">
+        <div class="result-section-title">Empirical Statements:</div>
+        <ul class="bullet-list" id="modal-facts-list"></ul>
+      </div>
+
+      <div class="result-section-box">
+        <div class="result-section-title">Evidence & Rationale:</div>
+        <p id="modal-evidence" style="font-size:0.88rem;"></p>
+      </div>
+
+      <div class="result-section-box">
+        <div class="result-section-title">Suspicious Indicators:</div>
+        <ul class="bullet-list danger" id="modal-indicators-list"></ul>
+      </div>
+
+      <div class="result-section-box">
+        <div class="result-section-title">Action Recommendations:</div>
+        <ul class="bullet-list" id="modal-recs-list"></ul>
+      </div>
+
+      <div style="display:flex; justify-content:flex-end; gap:0.75rem; margin-top:1.5rem;">
+        <button class="btn-secondary" id="modal-export-md">
+          <span>📄 Download Markdown</span>
+        </button>
+        <button class="btn-secondary" id="modal-export-json">
+          <span>💾 Download JSON</span>
+        </button>
+        <button class="btn-primary" onclick="closeModal('report-detail-modal')">
+          <span>Close Dossier</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Professional Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.75rem;">
+          <span style="font-size:1.25rem; font-weight:800; color:#fff;">TruthLens AI</span>
+          <span style="font-size:0.75rem; color:var(--cyan-primary); font-weight:700;">v2.0 Capstone</span>
+        </div>
+        <p style="font-size:0.82rem; color:var(--text-muted); line-height:1.6; max-width:400px; margin-bottom:1rem;">
+          AI-Powered Deepfake and Misinformation Awareness Platform. Designed to promote cognitive resilience, cyber defense literacy, and transparent verification.
+        </p>
+        <div style="font-size:0.75rem; color:var(--text-dim);">
+          Tagline: <em>"Pause. Investigate. Verify."</em>
+        </div>
+      </div>
+
+      <div>
+        <h4 style="font-size:0.9rem; color:#fff; margin-bottom:0.85rem;">Platform Modules</h4>
+        <ul style="list-style:none; line-height:2; font-size:0.82rem;">
+          <li><a href="#" data-target="dashboard">Dashboard Analytics</a></li>
+          <li><a href="#" data-target="verify">Claim Verification</a></li>
+          <li><a href="#" data-target="deepfake-lab">Deepfake Awareness Lab</a></li>
+          <li><a href="#" data-target="source-explorer">Source Credibility Explorer</a></li>
+          <li><a href="#" data-target="automation">Claim Automation Tool</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="font-size:0.9rem; color:#fff; margin-bottom:0.85rem;">Educational Resources</h4>
+        <ul style="list-style:none; line-height:2; font-size:0.82rem;">
+          <li><a href="#" data-target="checklist">10-Step Checklist</a></li>
+          <li><a href="#" data-target="learning-hub">Cyber Safety Hub</a></li>
+          <li><a href="#" data-target="quiz">Interactive Scam Quiz</a></li>
+          <li><a href="#" data-target="ethics">Ethical AI Statement</a></li>
+          <li><a href="#" data-target="history">Audit Dossier Ledger</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="font-size:0.9rem; color:#fff; margin-bottom:0.85rem;">Official Indian Portals</h4>
+        <ul style="list-style:none; line-height:2; font-size:0.82rem;">
+          <li><a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer">Cyber Crime Portal (1930)</a></li>
+          <li><a href="https://www.cert-in.org.in" target="_blank" rel="noopener noreferrer">CERT-In Advisories</a></li>
+          <li><a href="https://factcheck.pib.gov.in" target="_blank" rel="noopener noreferrer">PIB Fact Check</a></li>
+          <li><a href="https://rbi.org.in" target="_blank" rel="noopener noreferrer">Reserve Bank of India</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        &copy; 2026 TruthLens AI Project Team. Academic Cybersecurity Capstone Project.
+      </div>
+      <div style="font-size:0.78rem; color:var(--text-dim);">
+        Academic Disclaimer: TruthLens AI provides preliminary forensic analysis and does not constitute judicial determination.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic Scripts -->
+  <script src="/static/js/app.js"></script>
+  <script src="/static/js/dashboard.js"></script>
+  <script src="/static/js/verifier.js"></script>
+  <script src="/static/js/deepfake_lab.js"></script>
+  <script src="/static/js/source_checker.js"></script>
+  <script src="/static/js/checklist.js"></script>
+  <script src="/static/js/automation.js"></script>
+  <script src="/static/js/quiz.js"></script>
+  <script src="/static/js/history.js"></script>
+</body>
+</html>
